@@ -18,7 +18,7 @@ def bold(text: str) -> str:
     """
     Return the text in bold.
     """
-    return f"{BOLD}]{text}{RESET}"
+    return f"{BOLD}{text}{RESET}"
 
 def green(text: str) -> str:
     """
