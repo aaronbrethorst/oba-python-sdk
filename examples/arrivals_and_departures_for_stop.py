@@ -15,16 +15,10 @@ settings = load_settings(
 # Create a new instance of the OneBusAway SDK with the settings we loaded.
 oba = OnebusawaySDK(**settings)
 
-# Define the query parameters
-query = {
-    "tripId": "1_604670535",  # Replace with actual trip ID
-    "serviceDate": "1810918000000",  # Replace with actual service date in milliseconds since epoch
-}
-
-stopId = "1_75403"  # Replace with actual stop ID
+stopId = "1_19750"  # Replace with actual stop ID
 
 # Retrieve arrival and departure information
-response = oba.arrival_and_departure.list(stopId, extra_query=query)
+response = oba.arrival_and_departure.list(stopId)
 
 # Example to access specific data
 arrivals_and_departures = response.data.entry.arrivals_and_departures
